@@ -6,5 +6,6 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   css: ["~/assets/css/global.css", "~/assets/css/main.css"],
-  compatibilityDate: '2025-11-11'
+  compatibilityDate: '2025-11-11',
+  components: true
 })
