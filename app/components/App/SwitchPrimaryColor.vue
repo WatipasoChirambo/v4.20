@@ -78,9 +78,34 @@ const items = [
     ],
 ];
 
-const primaryColors = ['rose', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink']
+const primaryTech = {
+  rose: "Neural Uplink",
+  red: "System Alert",
+  orange: "Firmware Patch",
+  amber: "Latency Warning",
+  yellow: "Signal Beacon",
+  lime: "Green Energy Grid",
+  green: "Secure Connection",
+  emerald: "Quantum Encryption",
+  teal: "Data Stream",
+  cyan: "Holographic Display",
+  sky: "Cloud Sync",
+  blue: "Mainframe Core",
+  indigo: "Deep Learning Engine",
+  violet: "Spectral Analysis",
+  purple: "AI Compute Node",
+  fuchsia: "Pulse Scanner",
+  pink: "User Interface Layer"
+}
 
-const neutralColors = ['slate', 'gray', 'zinc', 'neutral', 'stone']
+const neutralTech = {
+  slate: "Server Rack",
+  gray: "Processor Hub",
+  zinc: "Nanotech Alloy",
+  neutral: "Base Protocol",
+  stone: "Core Framework"
+}
+
 
 const appConfig = useAppConfig();
 

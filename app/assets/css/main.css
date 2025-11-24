@@ -3,10 +3,12 @@
 @import "./global.css" layer(utilities);
 
 /* See config: https://ui3.nuxt.dev/getting-started/theme#colors */
+/* Nuxt UI 3 Theme Mapping */
 @theme {
   --font-family-inter: "Inter", sans-serif;
   --font-family-instrument: "Instrument Serif", serif;
 
+  /* Primary from Nuxt UI */
   --color-primary-50: var(--ui-color-primary-50);
   --color-primary-100: var(--ui-color-primary-100);
   --color-primary-200: var(--ui-color-primary-200);
@@ -19,6 +21,7 @@
   --color-primary-900: var(--ui-color-primary-900);
   --color-primary-950: var(--ui-color-primary-950);
 
+  /* Neutral ("dark") from Nuxt UI */
   --color-dark-50: var(--ui-color-neutral-50);
   --color-dark-100: var(--ui-color-neutral-100);
   --color-dark-200: var(--ui-color-neutral-200);
@@ -31,7 +34,8 @@
   --color-dark-900: var(--ui-color-neutral-900);
   --color-dark-950: var(--ui-color-neutral-950);
 }
-/* For Testing purposes */
+
+/* Debugging Utility */
 .\? {
   outline: 1px solid red;
 }
