@@ -2,7 +2,7 @@
   <section class="w-full bg-white py-20 border-t border-gray-200">
     <div class="max-w-2xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-semibold text-gray-900 mb-3">
-        Subscribe to ComputeMore Updates
+        Subscribe to <span class="text-secondary">C</span>ompute<span class="text-success">M</span>ore Updates
       </h2>
 
       <p class="text-gray-500 mb-8">
