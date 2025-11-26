@@ -123,7 +123,7 @@
           <UButton
             type="submit"
             size="lg"
-            color="primary"
+            color="secondary"
             class="font-semibold py-3"
           >
             Send Message
@@ -141,7 +141,7 @@
   </section>
 
   <!-- SUPPORT SECTION -->
-  <section class="bg-blue-50 pb-24 text-center">
+  <section class="bg-blue-50 pb-24 pt-18 text-center">
     <h2 class="text-4xl font-bold text-gray-900 mb-6">
       We’re Here to Support You
     </h2>
