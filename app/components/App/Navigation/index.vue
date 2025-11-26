@@ -45,9 +45,15 @@ const items = [
   <header class="fixed top-0 left-0 w-full z-[999998] bg-white">
     <UContainer class="flex items-center justify-between py-4">
       <!-- Logo -->
-      <NuxtLink to="/" class="text-xl font-semibold">
+       <div class="flex items-center">
+        <NuxtLink to="/" class="text-xl font-semibold">
         <NuxtImg src="/logo.png" class="h-16 md:h-20" alt="Company Logo" />
       </NuxtLink>
+      <div class="text-2xl bold">
+        <span class="text-secondary">C</span>ompute<span class="text-success">M</span>ore
+      </div>
+       </div>
+      
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center gap-6 relative">

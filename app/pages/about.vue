@@ -22,7 +22,7 @@
     </section>
 
     <!-- === COMPANY VALUES STRIP === -->
-    <section class="pb-20 text-white bg-gray-900 dark:bg-black border-b border-gray-800/60 dark:border-gray-700/40">
+    <section class="pb-20 text-white pt-16 mb-10 bg-gray-900 dark:bg-black border-b border-gray-800/60 dark:border-gray-700/40">
       <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center">
         <div class="space-y-4">
           <h3 class="text-2xl font-bold">Innovation</h3>
@@ -78,13 +78,24 @@
           <p class="opacity-80">Designed to streamline tasks, reduce clutter, and help teams stay focused.</p>
         </div>
         <div class="p-10 rounded-3xl bg-white dark:bg-gray-800 shadow-md hover: transition">
+          <h3 class="text-2xl font-semibold mb-3">Web Development</h3>
+           <p class="opacity-80">Crafting fast, secure, and scalable web apps and websites built for modern business needs.</p>
+        </div>
+        <div class="p-10 rounded-3xl bg-white dark:bg-gray-800 shadow-md hover: transition">
           <h3 class="text-2xl font-semibold mb-3">Data Trainings</h3>
           <p class="opacity-80">Empowering teams with hands-on training in modern data tools and workflows.</p>
         </div>
         <div class="p-10 rounded-3xl bg-white dark:bg-gray-800 shadow-md hover: transition">
           <h3 class="text-2xl font-semibold mb-3">Modern UX</h3>
-          <p class="opacity-80">Clear, intuitive interfaces crafted for humans — not systems.</p>
+          <p class="opacity-80">Clear, intuitive interfaces crafted for humansnot systems.</p>
         </div>
+        <div class="p-10 rounded-3xl bg-white dark:bg-gray-800 shadow-md hover: transition">
+  <h3 class="text-2xl font-semibold mb-3">Mobile App Development</h3>
+  <p class="opacity-80">
+    Designing high-performance, user-friendly mobile apps that bring your ideas to life on any device.
+  </p>
+</div>
+
         <div class="p-10 rounded-3xl bg-white dark:bg-gray-800 shadow-md hover: transition">
           <h3 class="text-2xl font-semibold mb-3">Future-Ready</h3>
           <p class="opacity-80">Scalable solutions that grow with your team and your needs.</p>

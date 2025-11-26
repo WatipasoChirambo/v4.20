@@ -21,7 +21,10 @@
   Innovating The Future of Corporate Technology
 </h1>
       <h4 class="text-3xl opacity-80 mb-8">Enterprise solutions engineered for global scale, security, and performance.</h4>
-      <UButton size="xl" color="secondary">Get Started</UButton>
+      <NuxtLink to="/contact">
+        <UButton size="xl" color="secondary">Contact us</UButton>
+      </NuxtLink>
+      
     </div>
 
   </section>
