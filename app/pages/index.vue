@@ -120,11 +120,6 @@
   </div>
 </section>
 
-
-    <section class="w-full m-0">
-      <NewsLetter/>
-    </section>
-
   </div>
 </template>
 
