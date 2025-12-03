@@ -161,9 +161,6 @@
         </div>
       </div>
     </Transition>
-    <div class="w-full">
-      <NewsLetter/>
-    </div>
   </div>
 </template>
 

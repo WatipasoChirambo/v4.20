@@ -106,16 +106,11 @@
         </div>
       </div>
     </section>
-    <section class="w-full m-0">
-      <NewsLetter/>
-    </section>
-
   </div>
 </template>
 
 <script setup>
-// VueUse Motion provides v-motion directive
-import NewsLetter from "~/components/App/NewsLetter.vue";
+
 
 </script>
 
