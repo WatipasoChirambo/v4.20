@@ -169,62 +169,76 @@ import { ref, computed } from "vue";
 import NewsLetter from "~/components/App/NewsLetter.vue";
 
 const team = [
-    {
+  {
     name: "Thanthwe Kalonga",
-    role: "General Manager",
-    image: "https://via.placeholder.com/320x280",
-    bio: "Mark oversees engineering excellence and scalable architecture.",
-    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
-  },
-    {
-    name: "Dr Emma Malonda",
-    role: "Software Architecture Manager",
-    image: "/team/emma.jpeg",
-    bio: "Daniel builds scalable and secure backend cloud systems.",
-    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
+    role: "Managing Director",
+    image: "/team/thanthwe.jpeg",
+    bio: "BCom(Hons) Acturial Science, TASSA",
+    social: { linkedin: "https://linkedin.com/in/thanthwe-kalonga-7191aa1b2" }
   },
   {
     name: "Christina Namalomba",
-    role: "Projects Manager",
+    role: "Business Development Manager",
     image: "/team/tina.jpeg",
-    bio: "Alice leads global strategy and corporate vision with 15+ years in enterprise digital transformation.",
-    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: null }
+    bio: "BCom (Banking), FMVA",
+    social: { linkedin: "https://linkedin.com/christinamnamalomba" }
   },
   {
-    name: "Dr Gift Chimangeni",
-    role: "Data Science Manager",
+    name: "Gift Chimangeni",
+    role: "AI Projects & Data Architecture Manager",
     image: "/team/gift.jpeg",
-    bio: "Mark oversees engineering excellence and scalable architecture.",
-    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
+    bio: "BSc (CompSci and Mathematics), MSc (Financial Engineering)",
+    social: { linkedin: "https://linkedin.com/gift-chimangeni" }
   },
   {
-    name: "Dr Paul Namalomba",
-    role: "Platform Engineering Manager",
+    name: "Paul Namalomba",
+    role: "Chief Innovation Officer & Lead Backend Engineer",
     image: "/team/paul.jpeg",
+    bio: "BSc(Hons) Civil, MSc (Structural Engineering)",
+    social: { linkedin: "https://linkedin.com/paulnamalomba", github: "https://paulnamalomba.github.io" }
+  },
+  {
+    name: "Emma Malonda",
+    role: "Data Science Manager & Lead Data Analyst",
+    image: "/team/emma.jpeg",
+    bio: "Daniel builds scalable and secure backend cloud systems.",
+    social: { linkedin: "https://linkedin.com/emma-malonda" }
+  },
+  {
+    name: "Chadwick Chihana",
+    role: "Finance Manager",
+    image: "https://via.placeholder.com/310x300",
     bio: "Mark oversees engineering excellence and scalable architecture.",
-    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
+    social: { linkedin: "https://linkedin.com/chadwick-chihana-796b33154" }
   },
   {
-    name: "Andy Kewo",
-    role: "Legal Manager",
-    image: "https://via.placeholder.com/300x350",
-    bio: "Alice leads global strategy and corporate vision with 15+ years in enterprise digital transformation.",
-    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: null }
-  },
-  {
-    name: "Diana Nguluwe",
-    role: "Digital Marketing Manager / Administration",
-    image: "https://via.placeholder.com/280x340",
-    bio: "Sophia drives product usability and innovative experience design.",
-    social: { twitter: null, linkedin: "https://linkedin.com/", github: null }
+      name: "Andy Kewo",
+    role: "Legal Director",
+    image: "/team/andy.jpeg",
+    bio: "Mark oversees engineering excellence and scalable architecture.",
+    social: { linkedin: "https://linkedin.com/andy-kewo-550550242" }
   },
   {
     name: "Watipaso Chirambo",
-    role: "Lead Backend Architect",
+    role: "Chief Technical Officer & Lead Software Architect",
     image: "https://via.placeholder.com/310x300",
     bio: "Daniel builds scalable and secure backend cloud systems.",
-    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
-  }
+    social: { linkedin: "https://linkedin.com/watipaso-chirambo-6988b6212", github: "https://github.com/WatipasoChirambo" }
+  },   
+  {
+    name: "Diana Nguluwe",
+    role: "Digital Marketing Manager",
+    image: "https://via.placeholder.com/310x300",
+    bio: "Sophia drives product usability and innovative experience design.",
+    social: { linkedin: null }
+  },
+  {
+    name: "Dylan Chigowo",
+    role: "Administration",
+    image: "https://via.placeholder.com/310x300",
+    bio: "Sophia drives product usability and innovative experience design.",
+    social: { linkedin: null }
+  },
 ];
 
 const isOpen = ref(false);

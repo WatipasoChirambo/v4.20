@@ -2,7 +2,7 @@
   <section class="w-full bg-white py-20 border-t border-gray-200">
     <div class="max-w-2xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-semibold text-gray-900 mb-3">
-        Subscribe to <span class="text-secondary">C</span>ompute<span class="text-success">M</span>ore Updates
+        Subscribe to Updates and Offers from <strong>ComputeMore</strong>
       </h2>
 
       <p class="text-gray-500 mb-8">
@@ -13,7 +13,7 @@
         <input
           v-model="email"
           type="email"
-          placeholder="Work email"
+          placeholder="Email address"
           required
           class="px-4 py-3 rounded-lg border border-gray-300 text-gray-800
                  focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -21,11 +21,11 @@
 
         <div>
           <UButton
-          type="submit"
-          class="bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
-        >
-          Subscribe
-        </UButton>
+            type="submit"
+            class="px-4 py-2 text-xs sm:text-sm md:text-base bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+          >
+            Subscribe
+          </UButton>
         </div>
       </form>
 

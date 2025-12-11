@@ -9,7 +9,11 @@
         <!-- Brand -->
         <div class="md:col-span-2">
           <NuxtLink to="/" class="text-xl font-semibold">
-            <NuxtImg src="/logo.png" class="h-24 mb-4" alt="Company Logo" />
+            <NuxtImg 
+              src="/Internal/Main-Logo_2b.png" 
+              class="h-16 md:h-20 w-auto object-contain" 
+              alt="Company Logo" 
+            />
           </NuxtLink>
 
           <p class="text-gray-200 leading-relaxed max-w-sm">

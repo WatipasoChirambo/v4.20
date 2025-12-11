@@ -40,12 +40,19 @@ const items = [
     <UContainer class="flex items-center justify-between py-4">
       <!-- Logo -->
        <div class="flex items-center">
-        <NuxtLink to="/" class="text-xl font-semibold">
-        <NuxtImg src="/logo.png" class="h-16 md:h-20" alt="Company Logo" />
-      </NuxtLink>
-      <div class="text-2xl bold">
+        <NuxtLink 
+          to="/" 
+          class="text-xl font-semibold"
+        >
+          <NuxtImg 
+            src="/Internal/Main-Logo_2.png" 
+            class="h-10 md:h-20 w-auto object-contain" 
+            alt="Company Logo" 
+          />
+        </NuxtLink>
+      <!-- <div class="text-2xl bold">
         <span class="text-secondary">C</span>ompute<span class="text-success">M</span>ore
-      </div>
+      </div> -->
        </div>
       
 
@@ -112,7 +119,9 @@ const items = [
       <!-- Mobile Hamburger -->
       <UButton
         class="md:hidden flex items-center z-[9999]"
-        @click="()=>!mobileOpen"
+        @click="mobileOpen = !mobileOpen"
+        :aria-expanded="mobileOpen"
+        aria-controls="mobile-menu"
         aria-label="Open Menu"
       >
         <UIcon name="i-heroicons-bars-3" class="w-8 h-8" />
@@ -122,7 +131,7 @@ const items = [
     <!-- MOBILE SLIDEOVER -->
     <USlideover v-model="mobileOpen">
       <template #content>
-        <div class="p-6 flex flex-col h-full">
+        <div id="mobile-menu" class="p-4 sm:p-6 flex flex-col h-full">
           <!-- Close Button -->
           <button
             class="self-end mb-6"
@@ -133,13 +142,13 @@ const items = [
           </button>
 
           <!-- Mobile Navigation -->
-          <nav class="flex flex-col gap-5 overflow-y-auto">
-            <div v-for="item in items" :key="item.label" class="flex flex-col">
+          <nav class="flex flex-col gap-4 overflow-y-auto" style="max-height: calc(100vh - 6rem);">
+            <div v-for="item in items" :key="item.label" class="flex flex-col border-b last:border-b-0 border-gray-200 pb-3">
               <!-- Simple Link -->
               <NuxtLink
                 v-if="!item.children"
                 :to="item.to"
-                class="text-lg font-medium"
+                class="text-lg font-medium py-3 block"
                 @click="mobileOpen = false"
               >
                 {{ item.label }}
@@ -172,7 +181,7 @@ const items = [
                       v-for="child in item.children"
                       :key="child.label"
                       :to="child.to"
-                      class="text-base text-gray-700"
+                      class="text-base text-gray-700 py-2 block"
                       @click="mobileOpen = false"
                     >
                       {{ child.label }}
