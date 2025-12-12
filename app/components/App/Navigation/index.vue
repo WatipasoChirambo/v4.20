@@ -17,15 +17,15 @@ const items = [
       { label: "Consulting", to: "/consulting" },
       { label: "Development", to: "/development" },
       { label: "Support", to: "/support" },
-      { label: "Data Visualization", to: "/data_visualization" },
+      { label: "Data Visualization", to: "/data_visualization" },s
       { label: "Data Analysis", to: "/analysis" },
       { label: "Data Cleaning", to: "/data_cleaning" },
       { label: "Data Center", to: "/data_center" },
       { label: "Data Warehouse", to: "/data_warehouse" },
-      { label: "Project Management", to: "/project_management" },
+      { label: "Project Management", to: "/project_managsement" },
       { label: "Web Hosting", to: "/hosting" },
       { label: "Computers & Devices", to: "/computers_devices" },
-      { label: "Payment Solutions", to: "/services/payment-solutions" },
+      { label: "Payment Solutions", to: "/payment_solutions" },
     ],
   },
 
