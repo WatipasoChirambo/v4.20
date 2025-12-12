@@ -199,28 +199,28 @@ const team = [
   {
     name: "Christina Namalomba",
     role: "Projects Manager",
-    image: "/team/tina.jpeg",
+    image: "/tina.jpeg",
     bio: "Alice leads global strategy and corporate vision with 15+ years in enterprise digital transformation.",
     social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: null }
   },
   {
     name: "Dr Gift Chimangeni",
     role: "Data Science Manager",
-    image: "/team/gift.jpeg",
+    image: "/gift.jpeg",
     bio: "Mark oversees engineering excellence and scalable architecture.",
     social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
   },
   {
     name: "Dr Paul Namalomba",
     role: "Data Science Manager",
-    image: "/team/paul.jpeg",
+    image: "/paul.jpeg",
     bio: "Mark oversees engineering excellence and scalable architecture.",
     social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
   },
   {
     name: "Dr Emma Malonda",
     role: "Software Architecture Manager",
-    image: "/team/emma.jpeg",
+    image: "/emma.jpeg",
     bio: "Daniel builds scalable and secure backend cloud systems.",
     social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
   },
