@@ -247,7 +247,7 @@ const team = [
   },
   {
     name: "Diana Nguluwe",
-    role: "Digital Marketing Manager / Administration",
+    role: "Digital Marketing Manager",
     image: "https://via.placeholder.com/280x340",
     bio: "Sophia drives product usability and innovative experience design.",
     social: { twitter: null, linkedin: "https://linkedin.com/", github: null }
@@ -255,6 +255,14 @@ const team = [
   {
     name: "Watipaso Chirambo",
     role: "Lead Backend Architect",
+    image: "https://via.placeholder.com/310x300",
+    bio: "Daniel builds scalable and secure backend cloud systems.",
+    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
+  }
+  ,
+  {
+    name: "Dylan Chigowo",
+    role: "",
     image: "https://via.placeholder.com/310x300",
     bio: "Daniel builds scalable and secure backend cloud systems.",
     social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }

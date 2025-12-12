@@ -23,7 +23,6 @@ const items = [
       { label: "Data Center", to: "/data_center" },
       { label: "Data Warehouse", to: "/data_warehouse" },
       { label: "Project Management", to: "/project_management" },
-      //{ label: "Domain Name Supply", to: "/domain_name_supply" },
       { label: "Web Hosting", to: "/hosting" },
       { label: "Computers & Devices", to: "/computers_devices" },
       { label: "Payment Solutions", to: "/services/payment-solutions" }, // Add this
@@ -36,15 +35,15 @@ const items = [
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 w-full z-[999998] bg-white">
+  <header class="fixed top-0 left-0 w-full z-[999998] bg-white text-black">
     <UContainer class="flex items-center justify-between py-4">
       <!-- Logo -->
        <div class="flex items-center">
         <NuxtLink to="/" class="text-xl font-semibold">
         <NuxtImg src="/logo.png" class="h-16 md:h-20" alt="Company Logo" />
       </NuxtLink>
-      <div class="text-2xl bold">
-        <span class="text-secondary">C</span>ompute<span class="text-success">M</span>ore
+      <div class="text-2xl bold text-black">
+        <span class="text-black">C</span>ompute<span class="text-success">M</span>ore
       </div>
        </div>
       
