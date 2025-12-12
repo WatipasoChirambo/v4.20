@@ -34,7 +34,7 @@
   </section>
 
   <!-- Team Grid -->
-  <div class="min-h-screen hero-adjust bg-gradient-to-b from-gray-50 to-gray-100 pb-16">
+  <div class="min-h-screen hero-adjust bg-gradient-to-b from-gray-50 to-gray-100 pb-16 pt-20">
     <section class="max-w-7xl mx-auto px-6 mb-8">
       <h1
         class="text-4xl md:text-5xl font-bold mb-14 text-center text-gray-800"
@@ -179,28 +179,28 @@ const team = [
     {
     name: "Dr Emma Malonda",
     role: "Software Architecture Manager",
-    image: "/team/emma.jpeg",
+    image: "/emma.jpeg",
     bio: "Daniel builds scalable and secure backend cloud systems.",
     social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
   },
   {
     name: "Christina Namalomba",
     role: "Projects Manager",
-    image: "/team/tina.jpeg",
+    image: "/tina.jpeg",
     bio: "Alice leads global strategy and corporate vision with 15+ years in enterprise digital transformation.",
     social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: null }
   },
   {
     name: "Dr Gift Chimangeni",
     role: "Data Science Manager",
-    image: "/team/gift.jpeg",
+    image: "/gift.jpeg",
     bio: "Mark oversees engineering excellence and scalable architecture.",
     social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
   },
   {
     name: "Dr Paul Namalomba",
     role: "Platform Engineering Manager",
-    image: "/team/paul.jpeg",
+    image: "/paul.jpeg",
     bio: "Mark oversees engineering excellence and scalable architecture.",
     social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
   },
@@ -212,19 +212,33 @@ const team = [
     social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: null }
   },
   {
+    name: "chadwick chihana",
+    role: "Financial Manager",
+    image: "https://via.placeholder.coms/300x350",
+    bio: "Alice leads global strategy and corporate vision with 15+ years in enterprise digital transformation.",
+    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: null }
+  },
+  {
+    name: "Dylan chigowo",
+    role: "Administrative Manager",
+    image: "https://via.placeholder.coms/300x350",
+    bio: "Alice leads global strategy and corporate vision with 15+ years in enterprise digital transformation.",
+    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: null }
+  },
+  {
+    name: "Watipaso chirambo",
+    role: "Software Development Manager",
+    image: "https://via.placeholder.coms/300x350",
+    bio: "Alice leads global strategy and corporate vision with 15+ years in enterprise digital transformation.",
+    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: null }
+  },
+  {
     name: "Diana Nguluwe",
-    role: "Digital Marketing Manager / Administration",
+    role: "Digital Marketing Manager",
     image: "https://via.placeholder.com/280x340",
     bio: "Sophia drives product usability and innovative experience design.",
     social: { twitter: null, linkedin: "https://linkedin.com/", github: null }
   },
-  {
-    name: "Watipaso Chirambo",
-    role: "Lead Backend Architect",
-    image: "https://via.placeholder.com/310x300",
-    bio: "Daniel builds scalable and secure backend cloud systems.",
-    social: { twitter: "https://twitter.com/", linkedin: "https://linkedin.com/", github: "https://github.com/" }
-  }
 ];
 
 const isOpen = ref(false);

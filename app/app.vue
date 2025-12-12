@@ -3,6 +3,7 @@
   <UApp :toaster="toaster">
     <NuxtLayout>
       <NuxtPage />
+      <AppSlideover />
     </NuxtLayout>
   </UApp>
 </template>
