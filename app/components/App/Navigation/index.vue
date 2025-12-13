@@ -14,19 +14,16 @@ const items = [
   {
     label: "Services",
     children: [
-      { label: "Consulting", to: "/consulting" },
-      { label: "Development", to: "/development" },
-      { label: "Support", to: "/support" },
-      { label: "Data Visualization", to: "/data_visualization" },
-      { label: "Data Analysis", to: "/analysis" },
-      { label: "Data Cleaning", to: "/data_cleaning" },
-      { label: "Data Center", to: "/data_center" },
-      { label: "Data Warehouse", to: "/data_warehouse" },
-      { label: "Project Management", to: "/project_management" },
-      //{ label: "Domain Name Supply", to: "/domain_name_supply" },
-      { label: "Web Hosting", to: "/hosting" },
+      { label: "Technical Consulting", to: "/technical_consulting" },
+      { label: "Website and WebApp Development", to: "/website_and_webapp_development" },
+      { label: "Web Hosting and Domain Name Services", to: "/web_hosting_dns" },
+      { label: "Software Development", to: "/software_development" },
+      { label: "Database Management", to: "/database_management" },
+      { label: "Advanced Analytics and AI", to: "/advanced_analytics_ai" },
+      { label: "Cloud Solutions", to: "/cloud_solutions" },
+      { label: "IT Support & Managed Services", to: "/it_support" },
       { label: "Computers & Devices", to: "/computers_devices" },
-      { label: "Payment Solutions", to: "/services/payment-solutions" }, // Add this
+      { label: "Payment Solutions", to: "/services/payment_solutions" }
     ],
   },
 
@@ -123,15 +120,17 @@ const items = [
         :aria-expanded="mobileOpen"
         aria-controls="mobile-menu"
         aria-label="Open Menu"
+        variant="ghost"
+        color="gray"
       >
         <UIcon name="i-heroicons-bars-3" class="w-8 h-8" />
       </UButton>
     </UContainer>
 
     <!-- MOBILE SLIDEOVER -->
-    <USlideover v-model="mobileOpen">
+    <USlideover v-model:open="mobileOpen">
       <template #content>
-        <div id="mobile-menu" class="p-4 sm:p-6 flex flex-col h-full">
+        <div id="mobile-menu" class="p-4 sm:p-6 flex flex-col h-full bg-white">
           <!-- Close Button -->
           <button
             class="self-end mb-6"
@@ -148,7 +147,7 @@ const items = [
               <NuxtLink
                 v-if="!item.children"
                 :to="item.to"
-                class="text-lg font-medium py-3 block"
+                class="text-sm font-medium py-3 block"
                 @click="mobileOpen = false"
               >
                 {{ item.label }}
@@ -157,7 +156,7 @@ const items = [
               <!-- Accordion Parent -->
               <div v-else>
                 <button
-                  class="flex justify-between items-center text-lg font-semibold w-full"
+                  class="flex justify-between items-center text-base font-semibold w-full py-3"
                   @click="toggleDropdown(item.label)"
                 >
                   {{ item.label }}
@@ -181,7 +180,7 @@ const items = [
                       v-for="child in item.children"
                       :key="child.label"
                       :to="child.to"
-                      class="text-base text-gray-700 py-2 block"
+                      class="text-sm text-gray-700 py-2 block"
                       @click="mobileOpen = false"
                     >
                       {{ child.label }}

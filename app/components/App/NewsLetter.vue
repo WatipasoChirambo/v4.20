@@ -1,7 +1,7 @@
 <template>
   <section class="w-full bg-white py-20 border-t border-gray-200">
     <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-semibold text-gray-900 mb-3">
+      <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
         Subscribe to Updates and Offers from <strong>ComputeMore</strong>
       </h2>
 
@@ -29,7 +29,7 @@
         </div>
       </form>
 
-      <p class="text-gray-400 text-sm mt-6">
+      <p class="text-gray-500 mb-8">
         Your information is always confidential.
       </p>
     </div>

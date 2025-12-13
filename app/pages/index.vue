@@ -18,9 +18,9 @@
           <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
              Advancing the Future of Corporate Technology in Africa
           </h2>
-          <h4 class="text-xs sm:text-sm md:text-lg lg:text-2xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
+          <p class="text-xs sm:text-sm md:text-lg lg:text-2xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
              Enterprise solutions engineered for scalability, security, and performance in the ever-expanding digital ecosystem
-          </h4>
+          </p>
           <NuxtLink to="/contact">
             <UButton class="px-4 py-2 text-xs sm:text-sm md:text-base" color="secondary">Contact us</UButton>
           </NuxtLink>
@@ -34,8 +34,10 @@
     >
       <div class="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-16 px-6">
         <div>
-          <h2 class="text-4xl font-bold mb-4">Who We Are</h2>
-          <p class="text-lg opacity-90 mb-6">
+          <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
+            Who We Are
+          </h2>
+          <p class="text-xs sm:text-sm md:text-lg lg:text-2xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
             We are a corporate technology powerhouse specializing in enterprise automation, cloud architecture, AI solutions, and next-gen infrastructure systems.
           </p>
           <NuxtLink to="/about">
@@ -52,7 +54,9 @@
     <!-- SERVICES -->
     <section class="py-24 bg-white dark:bg-gray-900">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold">Our Services</h2>
+        <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
+          Our Services
+        </h2>
       </div>
 
       <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-6">
@@ -67,8 +71,12 @@
     <!-- CLIENT SLIDER -->
     <section class="py-20 bg-white dark:bg-gray-900">
       <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold">Trusted by Global Leaders</h2>
-        <p class="opacity-70">Our technology powers and is backed by world‑class organizations</p>
+        <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
+          Trusted by Global Leaders
+        </h2>
+        <p class="text-xs sm:text-sm md:text-lg lg:text-2xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
+          Our technology powers and is backed by world‑class organizations
+        </p>
       </div>
       <div class="overflow-hidden whitespace-nowrap relative w-full">
         <div class="flex gap-16 animate-slide py-8">
@@ -95,7 +103,9 @@
     <!-- TEAM SECTION -->
     <section class="py-24 bg-gradient-to-br to-blue-600 via-blue-700 from-green-500 text-white">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold">Leadership Team</h2>
+        <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
+          Leadership Team
+        </h2>
       </div>
 
       <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10 px-6">
