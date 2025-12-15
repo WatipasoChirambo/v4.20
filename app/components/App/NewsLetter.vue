@@ -19,14 +19,13 @@
                  focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
 
-        <div>
-          <UButton
-            type="submit"
-            class="px-5 py-3 text-base sm:text-base md:text-lg lg:text-xl bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-700 transition"
-          >
-            Subscribe
-          </UButton>
-        </div>
+        <UButton
+          type="submit"
+          size="lg"
+          class="w-full px-6 py-3 text-white font-semibold rounded transition"
+        >
+          Subscribe
+        </UButton>
       </form>
       <br></br>
       <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
