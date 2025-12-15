@@ -1,7 +1,7 @@
 <template>
   <!-- HERO SECTION WITH UPDATED BACKGROUND -->
   <section
-    class="w-full bg-gradient-to-br from-blue-600 to-blue-800 text-white py-24 shadow-lg rounded-b-[40px] mb-20 relative overflow-hidden"
+    class="w-full bg-gradient-to-br from-blue-600 to-blue-800 text-white py-24 shadow-lg rounded-b-[40px] mb-20 relative overflow-hidden -mt-16 sm:-mt-20 md:mt-0"
   >
     <div
       class="absolute inset-0 bg-cover bg-center opacity-80"
@@ -9,7 +9,7 @@
     ></div>
 
     <div class="relative max-w-3xl mx-auto text-center px-6">
-      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+      <h1 class="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight">
         Get in Touch
       </h1>
       <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
@@ -20,7 +20,7 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 py-20">
+  <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 py-20 -mt-16 sm:-mt-20 md:mt-0">
     <div>
       <h2 class="text-3xl font-bold text-gray-900 mb-4">
         Contact Information
@@ -30,18 +30,18 @@
       </p>
 
       <div class="space-y-6">
-        <div class="flex items-center gap-4">
+        <!-- <div class="flex items-center gap-4">
           <div class="text-blue-600 text-3xl">
             <i class="i-fa6-solid-phone"></i>
           </div>
-          <p class="text-gray-700 font-medium">+265888105356</p>
-        </div>
+          <p class="text-gray-700 font-medium">+265</p>
+        </div> -->
 
         <div class="flex items-center gap-4">
           <div class="text-blue-600 text-3xl">
             <i class="i-fa6-solid-envelope"></i>
           </div>
-          <p class="text-gray-700 font-medium">support@example.com</p>
+          <p class="text-gray-700 font-medium">tech@computemore.com</p>
         </div>
 
         <div class="flex items-center gap-4">
@@ -49,7 +49,7 @@
             <i class="i-fa6-solid-location-dot"></i>
           </div>
           <p class="text-gray-700 font-medium">
-            123 Innovation Drive, San Francisco, CA
+            P.O. Box 31548, Blantyre 3, Chichiri, Malawi
           </p>
         </div>
       </div>
@@ -140,7 +140,7 @@
     </div>
   </section>
 
-  <!-- SUPPORT SECTION -->
+  <!-- SUPPORT SECTION
   <section class="bg-blue-50 pb-24 pt-18 text-center">
     <h2 class="text-4xl font-bold text-gray-900 mb-6">
       We’re Here to Support You
@@ -152,7 +152,7 @@
     <UButton to="/faq" size="lg" color="primary" class="font-semibold">
       Visit FAQ
     </UButton>
-  </section>
+  </section> -->
 </template>
 
 <script setup>
