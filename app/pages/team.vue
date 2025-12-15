@@ -1,7 +1,8 @@
 <template>
   <!-- Hero Section -->
   <section
-    class="w-full relative text-white py-28 mb-20 shadow-lg rounded-b-[40px] overflow-hidden"
+    class="w-full relative text-white py-28 mb-20 shadow-lg rounded-b-[40px] overflow-hidden
+    -mt-16 sm:-mt-20 md:mt-0"
   >
     <!-- Background Image -->
     <div
@@ -15,8 +16,8 @@
     ></div>
 
     <!-- Hero Content -->
-    <div class="relative max-w-4xl mx-auto text-center px-6">
-      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+    <div class="relative max-w-4xl mx-auto text-center px-6 pt-20 md:pt-20 pb-0 md:pb-0">
+      <h1 class="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight">
         Meet the People Behind Our Success
       </h1>
       <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10">
@@ -193,7 +194,7 @@ const team = [
   {
     name: "Paul Namalomba",
     role: "Chief Innovation Officer & Lead Backend Engineer",
-    image: "/team/paul.jpeg",
+    image: "/team/paul.jpg",
     bio: "BSc(Hons) Civil, MSc (Structural Engineering)",
     social: { linkedin: "https://linkedin.com/paulnamalomba", github: "https://paulnamalomba.github.io" }
   },
@@ -207,7 +208,7 @@ const team = [
   {
     name: "Chadwick Chihana",
     role: "Finance Manager",
-    image: "https://via.placeholder.com/310x300",
+    image:  "/team/chadwick.jpg",
     bio: "Mark oversees engineering excellence and scalable architecture.",
     social: { linkedin: "https://linkedin.com/chadwick-chihana-796b33154" }
   },
@@ -221,23 +222,23 @@ const team = [
   {
     name: "Watipaso Chirambo",
     role: "Chief Technical Officer & Lead Software Architect",
-    image: "https://via.placeholder.com/310x300",
+    image: "/team/wati.jpg",
     bio: "Daniel builds scalable and secure backend cloud systems.",
     social: { linkedin: "https://linkedin.com/watipaso-chirambo-6988b6212", github: "https://github.com/WatipasoChirambo" }
   },   
   {
     name: "Diana Nguluwe",
     role: "Digital Marketing Manager",
-    image: "https://via.placeholder.com/310x300",
+    image: "/team/diana.jpg",
     bio: "Sophia drives product usability and innovative experience design.",
-    social: { linkedin: null }
+    social: { linkedin: "linkedin.com/in/diane-nguluwe-6b4763289" }
   },
   {
     name: "Dylan Chigowo",
     role: "Administration",
-    image: "https://via.placeholder.com/310x300",
+    image:  "/team/dylan.jpg",
     bio: "Sophia drives product usability and innovative experience design.",
-    social: { linkedin: null }
+    social: { linkedin: "linkedin.com/in/dylan-chigowo-4a2441256" }
   },
 ];
 

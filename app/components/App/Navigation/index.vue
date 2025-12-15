@@ -14,16 +14,15 @@ const items = [
   {
     label: "Services",
     children: [
-      { label: "Technical Consulting", to: "/technical_consulting" },
-      { label: "Website and WebApp Development", to: "/website_and_webapp_development" },
-      { label: "Web Hosting and Domain Name Services", to: "/web_hosting_dns" },
-      { label: "Software Development", to: "/software_development" },
-      { label: "Database Management", to: "/database_management" },
-      { label: "Advanced Analytics and AI", to: "/advanced_analytics_ai" },
-      { label: "Cloud Solutions", to: "/cloud_solutions" },
-      { label: "IT Support & Managed Services", to: "/it_support" },
-      { label: "Computers & Devices", to: "/computers_devices" },
-      { label: "Payment Solutions", to: "/services/payment_solutions" }
+      { label: "Advanced Analytics & AI", to: "/advanced_analytics_ai" },
+      { label: "Cloud Solutions & DevOps", to: "/cloud_solutions" },
+      { label: "Database Engineering & Management", to: "/data_engineering_management" },
+      { label: "Enterprise Software Development", to: "/enterprise_software_development" },
+      { label: "Computer Hardware & Devices", to: "/hardware_devices" },
+      { label: "ICT Consultancy", to: "/ict_consultancy" },
+      { label: "Payment Solutions", to: "/payment_solutions" },
+      { label: "Website & WebApp Development", to: "/website_and_webapp_development" },
+      { label: "Web Hosting & Domain Name Services", to: "/web_hosting_dns" }
     ],
   },
 

@@ -2,27 +2,33 @@
   <!-- Hero Section -->
   <div>
     <!-- HERO SECTION -->
-    <div class="relative w-full">
+    <div class="relative w-full -mt-16 sm:-mt-20 md:mt-0">
       <section 
-        class="relative text-white min-h-[60vh] md:h-[90vh] flex items-center justify-center overflow-hidden bg-cover bg-top md:bg-center px-4 sm:px-6"
+        class="relative text-white min-h-[85vh] sm:h-[90vh] md:h-[85vh] lg:h-[85vh] flex items-center justify-center overflow-hidden bg-cover bg-top md:bg-center px-4 sm:px-6"
         style="background-image: url('/hero.png');"
       >
         <!-- gradient background (bottom layer) -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black/35 to-black/10 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/25 to-black/5 pointer-events-none"></div>
 
         <!-- noise overlay (middle layer) -->
         <div class="absolute inset-0 z-20 pointer-events-none opacity-10 md:opacity-20 animate-pulse bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 
+        <!-- NEW: bottom fade into next section -->
+        <div class="absolute inset-x-0 bottom-0 h-32 md:h-48 lg:h-60 bg-gradient-to-b from-transparent to-blue-500/100 pointer-events-none z-10"></div>
+
         <!-- text (top layer) -->
         <div class="relative z-30 text-center max-w-xl sm:max-w-3xl md:max-w-5xl">
-          <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
-             Advancing the Future of Corporate Technology in Africa
-          </h2>
-          <p class="text-xs sm:text-sm md:text-lg lg:text-2xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
-             Enterprise solutions engineered for scalability, security, and performance in the ever-expanding digital ecosystem
+          <h1 class="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight">
+            Advancing the Future of Corporate Technology in Africa
+          </h1>
+          <p class="text-base sm:text-lg md:text-xl lg:text-2xl opacity-95 mb-6 leading-relaxed max-w-3xl mx-auto">
+            Enterprise solutions engineered for scalability, security, and performance in the ever-expanding digital ecosystem
           </p>
           <NuxtLink to="/contact">
-            <UButton class="px-4 py-2 text-xs sm:text-sm md:text-base" color="secondary">Contact us</UButton>
+            <UButton 
+              class="px-5 py-3 text-base sm:text-base md:text-lg lg:text-xl bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+              color="secondary">Contact Us
+            </UButton>
           </NuxtLink>
         </div>
       </section>
@@ -30,18 +36,27 @@
 
     <!-- ABOUT SECTION -->
     <section 
-      class="py-24 relative bg-gradient-to-b from-blue-600/80 to-gray-50 dark:to-gray-800"
+      class="py-18 sm:py-12 md:py-18 lg:py-24 relative bg-gradient-to-b from-blue-500/100 via-blue-400/50 via-blue-200/15 to-white dark:to-gray-900"
     >
-      <div class="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-16 px-6">
+      <!-- pulsating noise overlay (like hero) -->
+      <div class="absolute inset-0 z-10 pointer-events-none opacity-10 md:opacity-15 animate-pulse bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+
+      <!-- NEW: bottom fade into next section -->
+      <div class="absolute inset-x-0 bottom-0 h-24 md:h-32 lg:h-40 bg-gradient-to-b from-transparent to-white pointer-events-none z-10"></div>
+
+      <div class="relative z-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 px-6">
         <div>
-          <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
+        <h2 class="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-white">
             Who We Are
           </h2>
-          <p class="text-xs sm:text-sm md:text-lg lg:text-2xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
+          <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-100 mb-6 leading-relaxed max-w-3xl mx-auto text-white">
             We are a corporate technology powerhouse specializing in enterprise automation, cloud architecture, AI solutions, and next-gen infrastructure systems.
           </p>
           <NuxtLink to="/about">
-            <UButton class="px-4 py-2 text-xs sm:text-sm md:text-base" color="secondary">Learn More</UButton>
+            <UButton 
+              class="px-5 py-3 text-base sm:text-base md:text-lg lg:text-xl bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+              color="secondary">Learn More
+            </UButton>
           </NuxtLink>
         </div>
 
@@ -52,9 +67,9 @@
     </section>
 
     <!-- SERVICES -->
-    <section class="py-24 bg-white dark:bg-gray-900">
+    <section class="py-18 sm:py-12 md:py-18 lg:py-24 bg-white dark:bg-gray-900">
       <div class="text-center mb-16">
-        <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
+        <h2 class="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight">
           Our Services
         </h2>
       </div>
@@ -69,12 +84,12 @@
     </section>
 
     <!-- CLIENT SLIDER -->
-    <section class="py-20 bg-white dark:bg-gray-900">
+    <section class="py-18 sm:py-12 md:py-18 lg:py-24 bg-white dark:bg-gray-900">
       <div class="text-center mb-10">
-        <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
+        <h2 class="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight">
           Trusted by Global Leaders
         </h2>
-        <p class="text-xs sm:text-sm md:text-lg lg:text-2xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
           Our technology powers and is backed by world‑class organizations
         </p>
       </div>
@@ -103,7 +118,7 @@
     <!-- TEAM SECTION -->
     <section class="py-24 bg-gradient-to-br to-blue-600 via-blue-700 from-green-500 text-white">
       <div class="text-center mb-16">
-        <h2 class="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight break-words">
+        <h2 class="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-white">
           Leadership Team
         </h2>
       </div>
@@ -115,7 +130,7 @@
           class="text-center bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-xl"
         >
           <img :src="member.image" class="w-full rounded-xl shadow-lg mb-4" />
-          <h3 class="text-xl font-semibold text-white">{{ member.name }}</h3>
+          <h3 class="text-lg font-semibold text-white">{{ member.name }}</h3>
           <p class="text-sm opacity-90 mb-2">{{ member.role }}</p>
 
           <div class="flex justify-center gap-4 text-gray-200">
@@ -197,21 +212,25 @@ const services = [
 
 const images = [
   { src: '/ecoride.png', href: 'https://ecoridemw.com/', alt: 'Ecoride' },
+  { src: '/namecheap.png', href: 'https://www.namecheap.com/', alt: 'Namecheap' },
   { src: '/ictam.png', href: 'https://mis.ictam.org.mw/', alt: 'ICTAM' },
   { src: '/SRS.png', href: 'https://opensrs.com/', alt: 'SRS' },
   { src: '/yoco.png', href: 'https://www.yoco.com/za/', alt: 'Yoco' },
   { src: '/zoho.png', href: 'https://www.zoho.com', alt: 'Zoho' },
   { src: '/ecoride.png', href: 'https://ecoridemw.com/', alt: 'Ecoride' },
+  { src: '/namecheap.png', href: 'https://www.namecheap.com/', alt: 'Namecheap' },
   { src: '/ictam.png', href: 'https://mis.ictam.org.mw/', alt: 'ICTAM' },
   { src: '/SRS.png', href: 'https://opensrs.com/', alt: 'SRS' },
   { src: '/yoco.png', href: 'https://www.yoco.com/za/', alt: 'Yoco' },
   { src: '/zoho.png', href: 'https://www.zoho.com', alt: 'Zoho' },
   { src: '/ecoride.png', href: 'https://ecoridemw.com/', alt: 'Ecoride' },
+  { src: '/namecheap.png', href: 'https://www.namecheap.com/', alt: 'Namecheap' },
   { src: '/ictam.png', href: 'https://mis.ictam.org.mw/', alt: 'ICTAM' },
   { src: '/SRS.png', href: 'https://opensrs.com/', alt: 'SRS' },
   { src: '/yoco.png', href: 'https://www.yoco.com/za/', alt: 'Yoco' },
   { src: '/zoho.png', href: 'https://www.zoho.com', alt: 'Zoho' },
   { src: '/ecoride.png', href: 'https://ecoridemw.com/', alt: 'Ecoride' },
+  { src: '/namecheap.png', href: 'https://www.namecheap.com/', alt: 'Namecheap' },
   { src: '/ictam.png', href: 'https://mis.ictam.org.mw/', alt: 'ICTAM' },
   { src: '/SRS.png', href: 'https://opensrs.com/', alt: 'SRS' },
   { src: '/yoco.png', href: 'https://www.yoco.com/za/', alt: 'Yoco' },
@@ -243,7 +262,7 @@ const team = [
   {
     name: "Paul Namalomba",
     role: "Chief Innovation Officer & Lead Backend Engineer",
-    image: "/team/paul.jpeg",
+    image: "/team/paul.jpg",
     bio: "BSc(Hons) Civil, MSc (Structural Engineering)",
     social: { linkedin: "https://linkedin.com/paulnamalomba", github: "https://paulnamalomba.github.io" }
   },
@@ -257,7 +276,7 @@ const team = [
   {
     name: "Chadwick Chihana",
     role: "Finance Manager",
-    image: "https://via.placeholder.com/310x300",
+    image:  "/team/chadwick.jpg",
     bio: "Mark oversees engineering excellence and scalable architecture.",
     social: { linkedin: "https://linkedin.com/chadwick-chihana-796b33154" }
   },
@@ -271,23 +290,23 @@ const team = [
   {
     name: "Watipaso Chirambo",
     role: "Chief Technical Officer & Lead Software Architect",
-    image: "https://via.placeholder.com/310x300",
+    image: "/team/wati.jpg",
     bio: "Daniel builds scalable and secure backend cloud systems.",
     social: { linkedin: "https://linkedin.com/watipaso-chirambo-6988b6212", github: "https://github.com/WatipasoChirambo" }
   },   
   {
     name: "Diana Nguluwe",
     role: "Digital Marketing Manager",
-    image: "https://via.placeholder.com/310x300",
+    image: "/team/diana.jpg",
     bio: "Sophia drives product usability and innovative experience design.",
-    social: { linkedin: null }
+    social: { linkedin: "linkedin.com/in/diane-nguluwe-6b4763289" }
   },
   {
     name: "Dylan Chigowo",
     role: "Administration",
-    image: "https://via.placeholder.com/310x300",
+    image:  "/team/dylan.jpg",
     bio: "Sophia drives product usability and innovative experience design.",
-    social: { linkedin: null }
+    social: { linkedin: "linkedin.com/in/dylan-chigowo-4a2441256" }
   },
 ];
 
