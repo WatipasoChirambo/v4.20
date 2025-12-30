@@ -150,6 +150,15 @@ import { UButton, UCard } from "#components";
 import { Cpu, Cloud, ShieldCheck, BarChart3, Layers, Database} from "lucide-vue-next";
 import NewsLetter from "~/components/App/NewsLetter.vue";
 
+useHead({
+  title: 'ComputeMore Africa Technologies — Home',
+  meta: [
+    { name: 'description', content: 'ComputeMore builds tools that simplify workflows and help businesses thrive.' },
+    { property: 'og:title', content: 'ComputeMore Africa Technologies' },
+    { property: 'og:description', content: 'ComputeMore builds tools that simplify workflows and help businesses thrive.' }
+  ]
+})
+
 const services = [
   {
     title: "AI Automation",
@@ -238,13 +247,13 @@ const images = [
 ];
 
 const team = [
-  {
-    name: "Thanthwe Kalonga",
-    role: "Managing Director",
-    image: "/team/thanthwe.jpeg",
-    bio: "BCom(Hons) Acturial Science, TASSA",
-    social: { linkedin: "https://linkedin.com/in/thanthwe-kalonga-7191aa1b2" }
-  },
+  // {
+  //   name: "Thanthwe Kalonga",
+  //   role: "Managing Director",
+  //   image: "/team/thanthwe.jpeg",
+  //   bio: "BCom(Hons) Acturial Science, TASSA",
+  //   social: { linkedin: "https://linkedin.com/in/thanthwe-kalonga-7191aa1b2" }
+  // },
   {
     name: "Christina Namalomba",
     role: "Business Development Manager",
@@ -287,13 +296,13 @@ const team = [
     bio: "Mark oversees engineering excellence and scalable architecture.",
     social: { linkedin: "https://linkedin.com/andy-kewo-550550242" }
   },
-  {
-    name: "Watipaso Chirambo",
-    role: "Chief Technical Officer & Lead Software Architect",
-    image: "/team/wati.jpg",
-    bio: "Daniel builds scalable and secure backend cloud systems.",
-    social: { linkedin: "https://linkedin.com/watipaso-chirambo-6988b6212", github: "https://github.com/WatipasoChirambo" }
-  },   
+  // {
+  //   name: "Watipaso Chirambo",
+  //   role: "Chief Technical Officer & Lead Software Architect",
+  //   image: "/team/wati.jpg",
+  //   bio: "Daniel builds scalable and secure backend cloud systems.",
+  //   social: { linkedin: "https://linkedin.com/watipaso-chirambo-6988b6212", github: "https://github.com/WatipasoChirambo" }
+  // },   
   {
     name: "Diana Nguluwe",
     role: "Digital Marketing Manager",

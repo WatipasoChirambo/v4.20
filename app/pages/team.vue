@@ -170,13 +170,13 @@ import { ref, computed } from "vue";
 import NewsLetter from "~/components/App/NewsLetter.vue";
 
 const team = [
-  {
-    name: "Thanthwe Kalonga",
-    role: "Managing Director",
-    image: "/team/thanthwe.jpeg",
-    bio: "BCom(Hons) Acturial Science, TASSA",
-    social: { linkedin: "https://linkedin.com/in/thanthwe-kalonga-7191aa1b2" }
-  },
+  // {
+  //   name: "Thanthwe Kalonga",
+  //   role: "Managing Director",
+  //   image: "/team/thanthwe.jpeg",
+  //   bio: "BCom(Hons) Acturial Science, TASSA",
+  //   social: { linkedin: "https://linkedin.com/in/thanthwe-kalonga-7191aa1b2" }
+  // },
   {
     name: "Christina Namalomba",
     role: "Business Development Manager",
@@ -219,13 +219,13 @@ const team = [
     bio: "Mark oversees engineering excellence and scalable architecture.",
     social: { linkedin: "https://linkedin.com/andy-kewo-550550242" }
   },
-  {
-    name: "Watipaso Chirambo",
-    role: "Chief Technical Officer & Lead Software Architect",
-    image: "/team/wati.jpg",
-    bio: "Daniel builds scalable and secure backend cloud systems.",
-    social: { linkedin: "https://linkedin.com/watipaso-chirambo-6988b6212", github: "https://github.com/WatipasoChirambo" }
-  },   
+  // {
+  //   name: "Watipaso Chirambo",
+  //   role: "Chief Technical Officer & Lead Software Architect",
+  //   image: "/team/wati.jpg",
+  //   bio: "Daniel builds scalable and secure backend cloud systems.",
+  //   social: { linkedin: "https://linkedin.com/watipaso-chirambo-6988b6212", github: "https://github.com/WatipasoChirambo" }
+  // },   
   {
     name: "Diana Nguluwe",
     role: "Digital Marketing Manager",

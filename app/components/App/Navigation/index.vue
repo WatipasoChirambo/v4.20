@@ -43,7 +43,7 @@ const items = [
           <NuxtImg 
             src="/Internal/Main-Logo_2.png" 
             class="h-10 md:h-20 w-auto object-contain" 
-            alt="Company Logo" 
+            alt="ComputeMore Africa Technologies" 
           />
         </NuxtLink>
       <!-- <div class="text-2xl bold">

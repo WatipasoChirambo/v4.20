@@ -15,7 +15,11 @@ const toaster = { expand: false }
 useFaviconFromTheme()
 
 useHead({
+  title: 'ComputeMore Africa Technologies',
   meta: [
+    { name: 'description', content: 'ComputeMore builds tools that simplify workflows and help businesses thrive.' },
+    { property: 'og:title', content: 'ComputeMore Africa Technologies' },
+    { property: 'og:description', content: 'ComputeMore builds tools that simplify workflows and help businesses thrive.' },
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
   ],
