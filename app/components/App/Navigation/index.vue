@@ -62,8 +62,8 @@ const items = [
             }">
               Services
               <UIcon :name="openDropdown === 'Services'
-                  ? 'i-heroicons-chevron-up'
-                  : 'i-heroicons-chevron-down'
+                ? 'i-heroicons-chevron-up'
+                : 'i-heroicons-chevron-down'
                 " class="w-4 h-4" />
             </button>
 
@@ -104,51 +104,70 @@ const items = [
     </UContainer>
 
     <!-- MOBILE SLIDEOVER -->
-    <USlideover v-model:open="mobileOpen">
+    <USlideover v-model:open="mobileOpen" side="left">
       <template #content>
-        <div id="mobile-menu" class="p-4 sm:p-6 flex flex-col h-full bg-white">
-          <!-- Close Button -->
-          <button class="self-end mb-6" @click="mobileOpen = false" aria-label="Close Menu">
-            <UIcon name="i-heroicons-x-mark" class="w-7 h-7" />
-          </button>
+        <div class="flex flex-col h-full
+             bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700
+             text-white">
 
-          <!-- Mobile Navigation -->
-          <nav class="flex flex-col gap-4 overflow-y-auto" style="max-height: calc(100vh - 6rem);">
-            <div v-for="item in items" :key="item.label"
-              class="flex flex-col border-b last:border-b-0 border-gray-200 pb-3">
+          <!-- Header / Branding -->
+          <div class="flex items-center bg-white justify-between px-5 py-4 border-b border-white/10">
+            <div>
+              <NuxtLink to="/" @click="mobileOpen = false" class="flex items-center gap-2">
+              <NuxtImg src="/Internal/Main-Logo_2.png" class="h-10 w-auto object-contain"
+                alt="ComputeMore Africa Technologies" />
+            </NuxtLink>
+            </div>
+            
+
+            <button @click="mobileOpen = false" aria-label="Close Menu"
+              class="rounded-md p-1 hover:bg-white/10 transition">
+              <UIcon name="i-heroicons-x-mark" class="w-6 h-6 text-secondary" />
+            </button>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="flex-1 overflow-y-auto px-5 py-6 space-y-2">
+
+            <div v-for="item in items" :key="item.label" class="border-b border-white/10 last:border-none pb-2">
               <!-- Simple Link -->
-              <NuxtLink v-if="!item.children" :to="item.to" class="text-sm font-medium py-3 block"
+              <NuxtLink v-if="!item.children" :to="item.to" class="flex items-center justify-between py-3 text-base font-medium
+                   text-white/90 hover:text-secondary transition" active-class="text-secondary font-semibold"
                 @click="mobileOpen = false">
                 {{ item.label }}
               </NuxtLink>
 
               <!-- Accordion Parent -->
               <div v-else>
-                <button class="flex justify-between items-center text-base font-semibold w-full py-3"
-                  @click="toggleDropdown(item.label)">
+                <button class="flex w-full items-center justify-between py-3 text-base font-semibold
+                     text-white/90 hover:text-secondary transition" @click="toggleDropdown(item.label)">
                   {{ item.label }}
                   <UIcon :name="openDropdown === item.label
-                      ? 'i-heroicons-chevron-up'
-                      : 'i-heroicons-chevron-down'
-                    " class="w-5 h-5 transition-transform" />
+                    ? 'i-heroicons-chevron-up'
+                    : 'i-heroicons-chevron-down'" class="w-5 h-5 transition-transform duration-200" />
                 </button>
 
                 <!-- Accordion Content -->
                 <transition name="accordion">
-                  <div v-if="openDropdown === item.label" class="pl-4 flex flex-col gap-2 mt-2">
+                  <div v-if="openDropdown === item.label" class="mt-1 ml-3 pl-3 border-l border-white/20 flex flex-col">
                     <NuxtLink v-for="child in item.children" :key="child.label" :to="child.to"
-                      class="text-sm text-gray-700 py-2 block" @click="mobileOpen = false">
+                      class="py-2 text-sm text-white/70 hover:text-secondary transition"
+                      active-class="text-secondary font-medium" @click="mobileOpen = false">
                       {{ child.label }}
                     </NuxtLink>
                   </div>
                 </transition>
               </div>
             </div>
+          </nav>
 
-            <UButton to="/contact" color="secondary" block class="mt-4" @click="mobileOpen = false">
+          <!-- CTA Footer -->
+          <div class="px-5 py-4 flex justify-center border-t border-white/10 bg-white">
+            <UButton to="/contact" color="secondary" class="w-1/2" size="lg" block @click="mobileOpen = false">
               Contact Us
             </UButton>
-          </nav>
+          </div>
+
         </div>
       </template>
     </USlideover>
