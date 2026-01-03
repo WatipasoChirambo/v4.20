@@ -129,37 +129,62 @@ const items = [
           <!-- Navigation -->
           <nav class="flex-1 overflow-y-auto px-5 py-6 space-y-2">
 
-            <div v-for="item in items" :key="item.label" class="border-b border-white/10 last:border-none pb-2">
-              <!-- Simple Link -->
-              <NuxtLink v-if="!item.children" :to="item.to" class="flex items-center justify-between py-3 text-base font-medium
-                   text-white/90 hover:text-secondary transition" active-class="text-secondary font-semibold"
-                @click="mobileOpen = false">
-                {{ item.label }}
-              </NuxtLink>
+  <div
+    v-for="item in items"
+    :key="item.label"
+    class="border-b border-white/10 last:border-none pb-2"
+  >
 
-              <!-- Accordion Parent -->
-              <div v-else>
-                <button class="flex w-full items-center justify-between py-3 text-base font-semibold
-                     text-white/90 hover:text-secondary transition" @click="toggleDropdown(item.label)">
-                  {{ item.label }}
-                  <UIcon :name="openDropdown === item.label
-                    ? 'i-heroicons-chevron-up'
-                    : 'i-heroicons-chevron-down'" class="w-5 h-5 transition-transform duration-200" />
-                </button>
+    <!-- Simple Link -->
+    <NuxtLink
+      v-if="!item.children"
+      :to="item.to"
+      class="flex items-center justify-between py-3 text-base font-medium
+             text-white/90 hover:text-secondary transition"
+      active-class="text-secondary font-semibold underline underline-offset-6 decoration-2"
+      exact-active-class="text-secondary font-semibold underline underline-offset-6 decoration-2"
+      @click="mobileOpen = false"
+    >
+      {{ item.label }}
+    </NuxtLink>
 
-                <!-- Accordion Content -->
-                <transition name="accordion">
-                  <div v-if="openDropdown === item.label" class="mt-1 ml-3 pl-3 border-l border-white/20 flex flex-col">
-                    <NuxtLink v-for="child in item.children" :key="child.label" :to="child.to"
-                      class="py-2 text-sm text-white/70 hover:text-secondary transition"
-                      active-class="text-secondary font-medium" @click="mobileOpen = false">
-                      {{ child.label }}
-                    </NuxtLink>
-                  </div>
-                </transition>
-              </div>
-            </div>
-          </nav>
+    <!-- Accordion Parent -->
+    <div v-else>
+      <button
+        class="flex w-full items-center justify-between py-3 text-base font-semibold
+               text-white/90 hover:text-secondary transition"
+        @click="toggleDropdown(item.label)"
+      >
+        {{ item.label }}
+        <UIcon
+          :name="openDropdown === item.label
+            ? 'i-heroicons-chevron-up'
+            : 'i-heroicons-chevron-down'"
+          class="w-5 h-5 transition-transform duration-200"
+        />
+      </button>
+
+      <!-- Accordion Content -->
+      <transition name="accordion">
+        <div
+          v-if="openDropdown === item.label"
+          class="mt-1 ml-3 pl-3 border-l border-white/20 flex flex-col"
+        >
+          <NuxtLink
+            v-for="child in item.children"
+            :key="child.label"
+            :to="child.to"
+            class="py-2 text-sm text-white/70 hover:text-secondary transition"
+            active-class="text-secondary font-medium underline underline-offset-4 decoration-2"
+            @click="mobileOpen = false"
+          >
+            {{ child.label }}
+          </NuxtLink>
+        </div>
+      </transition>
+    </div>
+  </div>
+</nav>
 
           <!-- CTA Footer -->
           <div class="px-5 py-4 flex justify-center border-t border-white/10 bg-white">
