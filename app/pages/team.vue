@@ -26,8 +26,8 @@
       </p>
       <UButton
         size="lg"
-        color="white"
-        class="text-blue-800 font-semibold shadow-md hover:scale-[1.03] transition-all"
+        color="secondary"
+        class="font-semibold shadow-md hover:scale-[1.03] transition-all"
       >
         Learn More
       </UButton>
@@ -44,7 +44,7 @@
       </h1>
 
       <div
-        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8"
       >
         <div
           v-for="(member, index) in team"
@@ -61,7 +61,7 @@
 
           <div>
             <UButton
-            color="primary"
+            color="secondary"
             variant="solid"
             class="w-full text-center"
             @click="openPanel(index)"
@@ -150,7 +150,7 @@
               </UButton>
 
               <UButton
-                color="primary"
+                color="secondary"
                 variant="solid"
                 @click="nextMember"
                 :disabled="currentIndex === team.length - 1"

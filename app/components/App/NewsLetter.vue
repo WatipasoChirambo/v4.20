@@ -22,7 +22,8 @@
         <UButton
           type="submit"
           size="lg"
-          class="w-full px-6 py-3 text-white font-semibold rounded transition"
+          color="secondary"
+          class="w-full flex justify-center px-6 py-3 text-white font-semibold rounded transition"
         >
           Subscribe
         </UButton>

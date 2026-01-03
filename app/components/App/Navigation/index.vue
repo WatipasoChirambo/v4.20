@@ -35,74 +35,57 @@ const items = [
   <header class="fixed top-0 left-0 w-full z-[999998] bg-white">
     <UContainer class="flex items-center justify-between py-4">
       <!-- Logo -->
-       <div class="flex items-center">
-        <NuxtLink 
-          to="/" 
-          class="text-xl font-semibold"
-        >
-          <NuxtImg 
-            src="/Internal/Main-Logo_2.png" 
-            class="h-10 md:h-20 w-auto object-contain" 
-            alt="ComputeMore Africa Technologies" 
-          />
+      <div class="flex items-center">
+        <NuxtLink to="/" class="text-xl font-semibold">
+          <NuxtImg src="/Internal/Main-Logo_2.png" class="h-10 md:h-20 w-auto object-contain"
+            alt="ComputeMore Africa Technologies" />
         </NuxtLink>
-      <!-- <div class="text-2xl bold">
+        <!-- <div class="text-2xl bold">
         <span class="text-secondary">C</span>ompute<span class="text-success">M</span>ore
       </div> -->
-       </div>
-      
+      </div>
+
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center gap-6 relative">
-        <nav class="flex items-center gap-6 ">
-          <NuxtLink to="/" class="text-base font-medium hover:text-primary">
+        <nav class="flex items-center gap-6">
+          <NuxtLink to="/" class="text-base font-medium hover:text-secondary"
+            exact-active-class="text-secondary underline underline-offset-4">
             Home
           </NuxtLink>
 
           <!-- Services Dropdown -->
-          <div
-            class="relative"
-            @mouseenter="openDropdown = 'Services'"
-            @mouseleave="openDropdown = null"
-          >
-            <button class="flex items-center gap-1 font-medium">
+          <div class="relative" @mouseenter="openDropdown = 'Services'" @mouseleave="openDropdown = null">
+            <button class="flex items-center gap-1 font-medium hover:text-secondary" :class="{
+              'text-secondary underline underline-offset-4':
+                openDropdown === 'Services'
+            }">
               Services
-              <UIcon
-                :name="
-                  openDropdown === 'Services'
-                    ? 'i-heroicons-chevron-up'
-                    : 'i-heroicons-chevron-down'
-                "
-                class="w-4 h-4"
-              />
+              <UIcon :name="openDropdown === 'Services'
+                  ? 'i-heroicons-chevron-up'
+                  : 'i-heroicons-chevron-down'
+                " class="w-4 h-4" />
             </button>
 
             <transition name="accordion">
-              <div
-                v-if="openDropdown === 'Services'"
-                class="absolute left-0 mt-2 w-56 bg-white rounded-md p-3 flex flex-col z-50"
-              >
-                <NuxtLink
-                  v-for="child in items.find((i) => i.label === 'Services')
-                    .children"
-                  :key="child.label"
-                  :to="child.to"
-                  class="px-2 py-1 rounded hover:bg-gray-100 text-sm"
-                >
+              <div v-if="openDropdown === 'Services'"
+                class="absolute left-0 mt-2 w-56 bg-white rounded-md p-3 flex flex-col z-50">
+                <NuxtLink v-for="child in items.find((i) => i.label === 'Services').children" :key="child.label"
+                  :to="child.to" class="px-2 py-1 rounded text-sm hover:bg-gray-100 hover:text-secondary"
+                  active-class="text-secondary underline underline-offset-4">
                   {{ child.label }}
                 </NuxtLink>
               </div>
             </transition>
           </div>
 
-          <NuxtLink to="/team" class="text-base font-medium hover:text-primary">
+          <NuxtLink to="/team" class="text-base font-medium hover:text-secondary"
+            active-class="text-secondary underline underline-offset-4">
             Team
           </NuxtLink>
 
-          <NuxtLink
-            to="/about"
-            class="text-base font-medium hover:text-primary"
-          >
+          <NuxtLink to="/about" class="text-base font-medium hover:text-secondary"
+            active-class="text-secondary underline underline-offset-4">
             About Us
           </NuxtLink>
         </nav>
@@ -113,15 +96,9 @@ const items = [
       </div>
 
       <!-- Mobile Hamburger -->
-      <UButton
-        class="md:hidden flex items-center z-[9999]"
-        @click="mobileOpen = !mobileOpen"
-        :aria-expanded="mobileOpen"
-        aria-controls="mobile-menu"
-        aria-label="Open Menu"
-        variant="ghost"
-        color="gray"
-      >
+      <UButton class="md:hidden flex items-center z-[9999]" @click="mobileOpen = !mobileOpen"
+        :aria-expanded="mobileOpen" aria-controls="mobile-menu" aria-label="Open Menu" variant="ghost"
+        color="secondary">
         <UIcon name="i-heroicons-bars-3" class="w-8 h-8" />
       </UButton>
     </UContainer>
@@ -131,57 +108,36 @@ const items = [
       <template #content>
         <div id="mobile-menu" class="p-4 sm:p-6 flex flex-col h-full bg-white">
           <!-- Close Button -->
-          <button
-            class="self-end mb-6"
-            @click="mobileOpen = false"
-            aria-label="Close Menu"
-          >
+          <button class="self-end mb-6" @click="mobileOpen = false" aria-label="Close Menu">
             <UIcon name="i-heroicons-x-mark" class="w-7 h-7" />
           </button>
 
           <!-- Mobile Navigation -->
           <nav class="flex flex-col gap-4 overflow-y-auto" style="max-height: calc(100vh - 6rem);">
-            <div v-for="item in items" :key="item.label" class="flex flex-col border-b last:border-b-0 border-gray-200 pb-3">
+            <div v-for="item in items" :key="item.label"
+              class="flex flex-col border-b last:border-b-0 border-gray-200 pb-3">
               <!-- Simple Link -->
-              <NuxtLink
-                v-if="!item.children"
-                :to="item.to"
-                class="text-sm font-medium py-3 block"
-                @click="mobileOpen = false"
-              >
+              <NuxtLink v-if="!item.children" :to="item.to" class="text-sm font-medium py-3 block"
+                @click="mobileOpen = false">
                 {{ item.label }}
               </NuxtLink>
 
               <!-- Accordion Parent -->
               <div v-else>
-                <button
-                  class="flex justify-between items-center text-base font-semibold w-full py-3"
-                  @click="toggleDropdown(item.label)"
-                >
+                <button class="flex justify-between items-center text-base font-semibold w-full py-3"
+                  @click="toggleDropdown(item.label)">
                   {{ item.label }}
-                  <UIcon
-                    :name="
-                      openDropdown === item.label
-                        ? 'i-heroicons-chevron-up'
-                        : 'i-heroicons-chevron-down'
-                    "
-                    class="w-5 h-5 transition-transform"
-                  />
+                  <UIcon :name="openDropdown === item.label
+                      ? 'i-heroicons-chevron-up'
+                      : 'i-heroicons-chevron-down'
+                    " class="w-5 h-5 transition-transform" />
                 </button>
 
                 <!-- Accordion Content -->
                 <transition name="accordion">
-                  <div
-                    v-if="openDropdown === item.label"
-                    class="pl-4 flex flex-col gap-2 mt-2"
-                  >
-                    <NuxtLink
-                      v-for="child in item.children"
-                      :key="child.label"
-                      :to="child.to"
-                      class="text-sm text-gray-700 py-2 block"
-                      @click="mobileOpen = false"
-                    >
+                  <div v-if="openDropdown === item.label" class="pl-4 flex flex-col gap-2 mt-2">
+                    <NuxtLink v-for="child in item.children" :key="child.label" :to="child.to"
+                      class="text-sm text-gray-700 py-2 block" @click="mobileOpen = false">
                       {{ child.label }}
                     </NuxtLink>
                   </div>
@@ -189,13 +145,7 @@ const items = [
               </div>
             </div>
 
-            <UButton
-              to="/contact"
-              color="secondary"
-              block
-              class="mt-4"
-              @click="mobileOpen = false"
-            >
+            <UButton to="/contact" color="secondary" block class="mt-4" @click="mobileOpen = false">
               Contact Us
             </UButton>
           </nav>
@@ -210,11 +160,13 @@ const items = [
 .accordion-leave-active {
   transition: all 0.25s ease;
 }
+
 .accordion-enter-from,
 .accordion-leave-to {
   opacity: 0;
   max-height: 0;
 }
+
 .accordion-enter-to,
 .accordion-leave-from {
   opacity: 1;
