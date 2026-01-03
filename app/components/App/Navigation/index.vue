@@ -37,7 +37,7 @@ const items = [
       <!-- Logo -->
       <div class="flex items-center">
         <NuxtLink to="/" class="text-xl font-semibold">
-          <NuxtImg src="/Internal/Main-Logo_2.png" class="h-10 md:h-20 w-auto object-contain"
+          <NuxtImg src="/Internal/Main-Logo_2.png" class="h-10 md:h-20 lg:h-20 w-auto object-contain"
             alt="ComputeMore Africa Technologies" />
         </NuxtLink>
         <!-- <div class="text-2xl bold">
