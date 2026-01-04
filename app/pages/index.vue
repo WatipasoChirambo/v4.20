@@ -247,76 +247,65 @@ const images = [
 ];
 
 const team = [
-  // {
-  //   name: "Thanthwe Kalonga",
-  //   role: "Managing Director",
-  //   image: "/team/thanthwe.jpeg",
-  //   bio: "BCom(Hons) Acturial Science, TASSA",
-  //   social: { linkedin: "https://linkedin.com/in/thanthwe-kalonga-7191aa1b2" }
-  // },
   {
     name: "Christina Namalomba",
     role: "Business Development Manager",
     image: "/team/tina.jpeg",
-    bio: "BCom (Banking), FMVA",
+    bio: "Christina leads client acquisition and partnership development, driving revenue growth through strategic market analysis, stakeholder engagement, and tailored business solutions.",
     social: { linkedin: "https://linkedin.com/christinamnamalomba" }
   },
   {
     name: "Gift Chimangeni",
     role: "AI Projects & Data Architecture Manager",
     image: "/team/gift.jpeg",
-    bio: "BSc (CompSci and Mathematics), MSc (Financial Engineering)",
+    bio: "Gift oversees AI project delivery and data architecture design, ensuring scalable, high-performance data systems that support advanced analytics, machine learning, and business intelligence initiatives.",
     social: { linkedin: "https://linkedin.com/gift-chimangeni" }
   },
   {
     name: "Paul Namalomba",
     role: "Chief Innovation Officer & Lead Backend Engineer",
     image: "/team/paul.jpg",
-    bio: "BSc(Hons) Civil, MSc (Structural Engineering)",
-    social: { linkedin: "https://linkedin.com/paulnamalomba", github: "https://paulnamalomba.github.io" }
+    bio: "Paul drives innovation strategy and leads backend engineering, designing robust, secure, and scalable systems that power mission-critical applications and emerging digital solutions.",
+    social: {
+      linkedin: "https://linkedin.com/paulnamalomba",
+      github: "https://paulnamalomba.github.io"
+    }
   },
   {
     name: "Emma Malonda",
     role: "Data Science Manager & Lead Data Analyst",
     image: "/team/emma.jpeg",
-    bio: "Daniel builds scalable and secure backend cloud systems.",
+    bio: "Emma leads data science and analytics initiatives, transforming complex datasets into actionable insights through advanced modeling, statistical analysis, and data-driven reporting.",
     social: { linkedin: "https://linkedin.com/emma-malonda" }
   },
   {
     name: "Chadwick Chihana",
     role: "Finance Manager",
-    image:  "/team/chadwick.jpg",
-    bio: "Mark oversees engineering excellence and scalable architecture.",
+    image: "/team/chadwick.jpg",
+    bio: "Chadwick manages financial planning, budgeting, and compliance, providing strategic financial oversight to support sustainable growth, operational efficiency, and informed decision-making.",
     social: { linkedin: "https://linkedin.com/chadwick-chihana-796b33154" }
   },
   {
-      name: "Andy Kewo",
-    role: "Legal Director",
+    name: "Andy Kewo",
+    role: "Legal Manager",
     image: "/team/andy.jpeg",
-    bio: "Mark oversees engineering excellence and scalable architecture.",
+    bio: "Andy oversees legal and regulatory matters, ensuring organizational compliance, contract governance, and risk mitigation across all business operations.",
     social: { linkedin: "https://linkedin.com/andy-kewo-550550242" }
   },
-  // {
-  //   name: "Watipaso Chirambo",
-  //   role: "Chief Technical Officer & Lead Software Architect",
-  //   image: "/team/wati.jpg",
-  //   bio: "Daniel builds scalable and secure backend cloud systems.",
-  //   social: { linkedin: "https://linkedin.com/watipaso-chirambo-6988b6212", github: "https://github.com/WatipasoChirambo" }
-  // },   
   {
     name: "Diana Nguluwe",
     role: "Digital Marketing Manager",
     image: "/team/diana.jpg",
-    bio: "Sophia drives product usability and innovative experience design.",
+    bio: "Diana leads digital marketing strategy, managing brand presence, campaigns, and audience engagement across digital channels to drive visibility, growth, and customer acquisition.",
     social: { linkedin: "linkedin.com/in/diane-nguluwe-6b4763289" }
   },
   {
     name: "Dylan Chigowo",
-    role: "Administration",
-    image:  "/team/dylan.jpg",
-    bio: "Sophia drives product usability and innovative experience design.",
+    role: "Operations Manager",
+    image: "/team/dylan.jpg",
+    bio: "Dylan oversees day-to-day operations, optimizing processes, coordinating teams, and ensuring efficient service delivery aligned with organizational objectives.",
     social: { linkedin: "linkedin.com/in/dylan-chigowo-4a2441256" }
-  },
+  }
 ];
 
 </script>
