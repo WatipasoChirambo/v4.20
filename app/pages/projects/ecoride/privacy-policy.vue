@@ -19,8 +19,14 @@ const markdownIt = new MarkdownIt({
   typographer: true
 })
 
-const { data: rawMarkdown } = await useAsyncData('ecoride-privacy-policy-md', () =>
-  $fetch<string>('/api/ecoride/privacy-policy', { responseType: 'text' })
+const {
+  data: rawMarkdown,
+  pending,
+  error
+} = await useAsyncData('ecoride-privacy-policy-md', () =>
+  // Client-only fetch from public/ to support static hosting in production.
+  $fetch<string>('/docs/ecoride/privacy-policy.md', { responseType: 'text' }),
+  { server: false }
 )
 
 const normalizedMarkdown = computed(() => {
@@ -35,7 +41,11 @@ const renderedHtml = computed(() => markdownIt.render(normalizedMarkdown.value))
 
 <template>
   <section class="space-y-6">
-    <div class="ecoride-legal-content" v-html="renderedHtml" />
+    <div v-if="pending" class="text-sm opacity-70">Loading…</div>
+    <div v-else-if="error" class="text-sm opacity-70">
+      Failed to load the privacy policy.
+    </div>
+    <div v-else class="ecoride-legal-content" v-html="renderedHtml" />
   </section>
 </template>
 
