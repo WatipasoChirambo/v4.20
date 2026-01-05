@@ -5,7 +5,6 @@
 .nitro
 .cache
 dist
-# public/docs/ecoride/
 
 # Node dependencies
 node_modules
