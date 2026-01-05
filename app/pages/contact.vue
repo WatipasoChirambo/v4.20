@@ -61,11 +61,8 @@
 
       <form @submit.prevent="submitForm" class="space-y-6 flex flex-col w-full">
 
-        <UFormGroup
-          label="Full Name"
-          class="w-full"
-          :ui="{ container: 'w-full' }"
-        >
+        <div class="w-full">
+          <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
           <UInput
             v-model="form.name"
             size="lg"
@@ -73,13 +70,10 @@
             required
             class="w-full"
           />
-        </UFormGroup>
+        </div>
 
-        <UFormGroup
-          label="Email Address"
-          class="w-full"
-          :ui="{ container: 'w-full' }"
-        >
+        <div class="w-full">
+          <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
           <UInput
             v-model="form.email"
             type="email"
@@ -88,13 +82,10 @@
             required
             class="w-full"
           />
-        </UFormGroup>
+        </div>
 
-        <UFormGroup
-          label="Subject"
-          class="w-full"
-          :ui="{ container: 'w-full' }"
-        >
+        <div class="w-full">
+          <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
           <UInput
             v-model="form.subject"
             size="lg"
@@ -102,13 +93,10 @@
             required
             class="w-full"
           />
-        </UFormGroup>
+        </div>
 
-        <UFormGroup
-          label="Message"
-          class="w-full"
-          :ui="{ container: 'w-full' }"
-        >
+        <div class="w-full">
+          <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
           <UTextarea
             v-model="form.message"
             size="lg"
@@ -117,7 +105,7 @@
             required
             class="w-full"
           />
-        </UFormGroup>
+        </div>
 
         <div class="flex items-center w-full">
           <UButton
@@ -125,10 +113,16 @@
             size="lg"
             color="secondary"
             class="font-semibold py-3"
+            :loading="loading"
+            :disabled="loading"
           >
             Send Message
           </UButton>
         </div>
+
+        <p v-if="errorMessage" class="text-red-600 mt-3 font-medium text-center">
+          {{ errorMessage }}
+        </p>
 
         <p
           v-if="success"
@@ -155,7 +149,7 @@
   </section> -->
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 
 const form = ref({
@@ -166,11 +160,32 @@ const form = ref({
 })
 
 const success = ref(false)
+const loading = ref(false)
+const errorMessage = ref('')
 
-const submitForm = () => {
-  success.value = true
-  setTimeout(() => (success.value = false), 3000)
-  form.value = { name: '', email: '', subject: '', message: '' }
+const submitForm = async () => {
+  if (loading.value) return
+
+  loading.value = true
+  errorMessage.value = ''
+
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: form.value
+    })
+
+    success.value = true
+    setTimeout(() => (success.value = false), 3000)
+    form.value = { name: '', email: '', subject: '', message: '' }
+  } catch (error) {
+    const message = (error && typeof error === 'object' && 'statusMessage' in error)
+      ? String((error as any).statusMessage)
+      : 'Failed to send message. Please try again.'
+    errorMessage.value = message
+  } finally {
+    loading.value = false
+  }
 }
 </script>
 

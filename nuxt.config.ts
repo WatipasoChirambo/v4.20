@@ -7,5 +7,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/global.css", "~/assets/css/main.css"],
   compatibilityDate: '2025-11-11',
-  components: true
+  components: true,
+  runtimeConfig: {
+    smtpHost: '',
+    smtpPort: 587,
+    smtpSecure: false,
+    smtpUser: '',
+    smtpPass: '',
+    smtpFrom: '',
+    contactTo: 'tech@computemore.com'
+  }
 })
