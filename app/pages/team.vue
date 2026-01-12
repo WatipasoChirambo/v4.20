@@ -1,7 +1,8 @@
 <template>
   <!-- Hero Section -->
   <section
-    class="w-full relative text-white py-28 mb-20 shadow-lg rounded-b-[40px] overflow-hidden"
+    class="w-full relative text-white py-28 mb-20 shadow-lg rounded-b-[40px] overflow-hidden
+    -mt-16 sm:-mt-20 md:mt-0"
   >
     <!-- Background Image -->
     <div
@@ -15,8 +16,8 @@
     ></div>
 
     <!-- Hero Content -->
-    <div class="relative max-w-4xl mx-auto text-center px-6">
-      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+    <div class="relative max-w-4xl mx-auto text-center px-6 pt-20 md:pt-20 pb-0 md:pb-0">
+      <h1 class="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight">
         Meet the People Behind Our Success
       </h1>
       <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10">
@@ -25,8 +26,8 @@
       </p>
       <UButton
         size="lg"
-        color="white"
-        class="text-blue-800 font-semibold shadow-md hover:scale-[1.03] transition-all"
+        color="secondary"
+        class="font-semibold shadow-md hover:scale-[1.03] transition-all"
       >
         Learn More
       </UButton>
@@ -43,7 +44,7 @@
       </h1>
 
       <div
-        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8"
       >
         <div
           v-for="(member, index) in team"
@@ -60,7 +61,7 @@
 
           <div>
             <UButton
-            color="primary"
+            color="secondary"
             variant="solid"
             class="w-full text-center"
             @click="openPanel(index)"
@@ -149,7 +150,7 @@
               </UButton>
 
               <UButton
-                color="primary"
+                color="secondary"
                 variant="solid"
                 @click="nextMember"
                 :disabled="currentIndex === team.length - 1"
@@ -170,76 +171,66 @@ import NewsLetter from "~/components/App/NewsLetter.vue";
 
 const team = [
   {
-    name: "Thanthwe Kalonga",
-    role: "Managing Director",
-    image: "/team/thanthwe.jpeg",
-    bio: "BCom(Hons) Acturial Science, TASSA",
-    social: { linkedin: "https://linkedin.com/in/thanthwe-kalonga-7191aa1b2" }
-  },
-  {
     name: "Christina Namalomba",
     role: "Business Development Manager",
     image: "/team/tina.jpeg",
-    bio: "BCom (Banking), FMVA",
+    bio: "Christina leads client acquisition and partnership development, driving revenue growth through strategic market analysis, stakeholder engagement, and tailored business solutions.",
     social: { linkedin: "https://linkedin.com/christinamnamalomba" }
   },
   {
     name: "Gift Chimangeni",
     role: "AI Projects & Data Architecture Manager",
     image: "/team/gift.jpeg",
-    bio: "BSc (CompSci and Mathematics), MSc (Financial Engineering)",
+    bio: "Gift oversees AI project delivery and data architecture design, ensuring scalable, high-performance data systems that support advanced analytics, machine learning, and business intelligence initiatives.",
     social: { linkedin: "https://linkedin.com/gift-chimangeni" }
   },
   {
     name: "Paul Namalomba",
     role: "Chief Innovation Officer & Lead Backend Engineer",
-    image: "/team/paul.jpeg",
-    bio: "BSc(Hons) Civil, MSc (Structural Engineering)",
-    social: { linkedin: "https://linkedin.com/paulnamalomba", github: "https://paulnamalomba.github.io" }
+    image: "/team/paul.jpg",
+    bio: "Paul drives innovation strategy and leads backend engineering, designing robust, secure, and scalable systems that power mission-critical applications and emerging digital solutions.",
+    social: {
+      linkedin: "https://linkedin.com/paulnamalomba",
+      github: "https://paulnamalomba.github.io"
+    }
   },
   {
     name: "Emma Malonda",
     role: "Data Science Manager & Lead Data Analyst",
     image: "/team/emma.jpeg",
-    bio: "Daniel builds scalable and secure backend cloud systems.",
+    bio: "Emma leads data science and analytics initiatives, transforming complex datasets into actionable insights through advanced modeling, statistical analysis, and data-driven reporting.",
     social: { linkedin: "https://linkedin.com/emma-malonda" }
   },
   {
     name: "Chadwick Chihana",
     role: "Finance Manager",
-    image: "https://via.placeholder.com/310x300",
-    bio: "Mark oversees engineering excellence and scalable architecture.",
+    image: "/team/chadwick.jpg",
+    bio: "Chadwick manages financial planning, budgeting, and compliance, providing strategic financial oversight to support sustainable growth, operational efficiency, and informed decision-making.",
     social: { linkedin: "https://linkedin.com/chadwick-chihana-796b33154" }
   },
   {
-      name: "Andy Kewo",
-    role: "Legal Director",
+    name: "Andy Kewo",
+    role: "Legal Manager",
     image: "/team/andy.jpeg",
-    bio: "Mark oversees engineering excellence and scalable architecture.",
+    bio: "Andy oversees legal and regulatory matters, ensuring organizational compliance, contract governance, and risk mitigation across all business operations.",
     social: { linkedin: "https://linkedin.com/andy-kewo-550550242" }
   },
   {
-    name: "Watipaso Chirambo",
-    role: "Chief Technical Officer & Lead Software Architect",
-    image: "https://via.placeholder.com/310x300",
-    bio: "Daniel builds scalable and secure backend cloud systems.",
-    social: { linkedin: "https://linkedin.com/watipaso-chirambo-6988b6212", github: "https://github.com/WatipasoChirambo" }
-  },   
-  {
     name: "Diana Nguluwe",
     role: "Digital Marketing Manager",
-    image: "https://via.placeholder.com/310x300",
-    bio: "Sophia drives product usability and innovative experience design.",
-    social: { linkedin: null }
+    image: "/team/diana.jpg",
+    bio: "Diana leads digital marketing strategy, managing brand presence, campaigns, and audience engagement across digital channels to drive visibility, growth, and customer acquisition.",
+    social: { linkedin: "linkedin.com/in/diane-nguluwe-6b4763289" }
   },
   {
     name: "Dylan Chigowo",
-    role: "Administration",
-    image: "https://via.placeholder.com/310x300",
-    bio: "Sophia drives product usability and innovative experience design.",
-    social: { linkedin: null }
-  },
+    role: "Operations Manager",
+    image: "/team/dylan.jpg",
+    bio: "Dylan oversees day-to-day operations, optimizing processes, coordinating teams, and ensuring efficient service delivery aligned with organizational objectives.",
+    social: { linkedin: "linkedin.com/in/dylan-chigowo-4a2441256" }
+  }
 ];
+
 
 const isOpen = ref(false);
 const currentIndex = ref(0);

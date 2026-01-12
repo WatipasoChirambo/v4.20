@@ -1,11 +1,11 @@
 <template>
   <section class="w-full bg-white py-20 border-t border-gray-200">
     <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-semibold text-gray-900 mb-3">
+      <h2 class="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight">
         Subscribe to Updates and Offers from <strong>ComputeMore</strong>
       </h2>
 
-      <p class="text-gray-500 mb-8">
+      <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
         Receive strategic insights, product news, and enterprise technology updates.
       </p>
 
@@ -19,17 +19,17 @@
                  focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
 
-        <div>
-          <UButton
-            type="submit"
-            class="px-4 py-2 text-xs sm:text-sm md:text-base bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
-          >
-            Subscribe
-          </UButton>
-        </div>
+        <UButton
+          type="submit"
+          size="lg"
+          color="secondary"
+          class="w-full flex justify-center px-6 py-3 text-white font-semibold rounded transition"
+        >
+          Subscribe
+        </UButton>
       </form>
-
-      <p class="text-gray-400 text-sm mt-6">
+      <br></br>
+      <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-85 mb-6 leading-relaxed max-w-3xl mx-auto">
         Your information is always confidential.
       </p>
     </div>
